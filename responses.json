@@ -1,0 +1,28 @@
+{
+    "intents":[
+        {
+            "hello_responses":[
+                "I am still listening for your commands sir",
+                "I am there sir",
+                "How are you sir",
+                "Hello boss!",
+                "Yes sir"
+            ],
+            "sketch_responses": [
+                "Converting image to sketch ... please wait....",
+                "Generating a sketch for you sir",
+                "Drawing takes time... A line has time in it.",
+                "I wish I could draw the image how I see .",
+                "Sketch everything! and keep your curiosity fresh",
+                "To learn to draw is to draw and draw and draw.",
+                "I love the quality of my pencil. It helps me to get to the core of a thing."
+            ],
+            "bye_responses": [
+                "bye byee",
+                "I am going to sleep",
+                "good byee",
+                "see you later sir"
+            ]
+        }
+    ]
+}
