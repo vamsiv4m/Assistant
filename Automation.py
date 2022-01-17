@@ -1,7 +1,4 @@
-from dataclasses import field
-from importlib.resources import path
-from pywinauto.application import Application
-from Listen import takeCommand
+from os import startfile
 import calendar
 import time
 import os
@@ -16,3 +13,13 @@ def notepad(text):
 
 def close_notepad():
     os.system("TASKKILL /F /im Notepad.exe")
+
+def whatsapp(text):
+    startfile("C:\\Users\\ASUS\\AppData\\Local\\WhatsApp\\WhatsApp.exe")
+
+
+def visual_studio():
+    startfile("C:\\Users\\ASUS\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe")
+
+def close_vscode():
+    os.system("TASKKILL /F /im C:\\Users\\ASUS\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe")

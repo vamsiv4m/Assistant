@@ -1,3 +1,4 @@
+from fileinput import close
 import pyttsx3
 import sys
 import torch
@@ -5,7 +6,8 @@ from Listen import takeCommand
 import Sketch as sk
 import random
 import User_Requests as rq
-from Automation import notepad,close_notepad
+from Automation import notepad,close_notepad,visual_studio
+import Automation as auto
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 print(voices)
@@ -52,11 +54,23 @@ if __name__ == '__main__':
             else:
                 again()
 
-        elif "day" in query:
+        elif 'close notes' in query:
+            close_notepad()
+
+        elif "today" in query:
             speak(rq.tellDay())
         
-        elif "day tomorrow" in query:
+        elif "tomorrow" in query:
             speak(rq.tell_Tomorrow_Day())
+
+        elif "vs code" in query or "visual studio" in query or "open code" in query:
+            print("Opening visual studio code Code Editor.....")
+            speak("Opening v sCode Editor.....")
+            visual_studio()
+
+        elif "close vs code" in query or "close code" in query:
+            speak("Sure sir!")
+            auto.close_vscode()
 
         elif "time" in query:
             speak(rq.tellTime())
